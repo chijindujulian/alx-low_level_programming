@@ -16,19 +16,19 @@ char *str_concat(char *s1, char *s2)
 	/*get the length of string in s1*/
 	for (len1 = 0; s1[len1] != '\0'; len1++)
 	{}
-	
+
 	/*get length of s2*/
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 	{}
 
 	/*dynamic allocation of mem to str*/
 	str = (char *) malloc((len1 + len2 + 1) * sizeof(char));
-	
+
 	/*check if str is null*/
 	if (str == NULL)
 		return (NULL);
 
-	if (s1 != NULL)
+	if (s1)
 	{
 		for (i = 0; i < len1; i++)
 		{
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
-	if (s2 != NULL)
+	if (s2)
 	{
 		for (j = 0; j < (len1 + len2); j++)
 		{
